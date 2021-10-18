@@ -1,0 +1,9 @@
+{
+  "name": "nuxt-bnb",
+  "dependencies": {
+    "nuxt": "^2.15.8"
+  },
+  "scripts":{
+    "dev": "nuxt"
+  }
+}
