@@ -9,6 +9,16 @@
 <script>
 import homes from '@/data/homes.json';
     export default {
+        head(){
+            return{
+                title: "Nuxt Bnb, Wellcome!!",
+                meta: [{
+                    name: "description",
+                    content: "This is my Home page",
+                    hid: "description"
+                }]
+            }
+        },
         
         data(){
             return{
