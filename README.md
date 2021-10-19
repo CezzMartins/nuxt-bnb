@@ -4,9 +4,9 @@
 ```
 Features⬇️
 ```
-✅️ Vue js
-✅️ Nuxt js
-✅️ Vuex
-✅️ Axios
-✅️ Scss
+✅️ Vue js <br/>
+✅️ Nuxt js <br/>
+✅️ Vuex <br/>
+✅️ Axios <br/>
+✅️ Scss <br/>
 
