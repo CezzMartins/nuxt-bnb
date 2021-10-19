@@ -12,6 +12,12 @@ export default{
             charset: "utf-8",
         }]
     },
+
+    //routes
+    router: {
+        prefetchLinks: false,
+    },
+
     //auto import components
     components: true,
 }

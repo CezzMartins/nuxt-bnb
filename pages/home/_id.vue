@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <div style="display: flex">
             <img v-for="image in home.images" :key="image" alt="homes" :src="image" width="200px" height="150px"/>        
         </div>
