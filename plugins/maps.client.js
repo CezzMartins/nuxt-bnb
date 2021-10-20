@@ -7,6 +7,7 @@ export default function(context, inject){
         showMap
     })
 
+    // add the Google APi Maps to the site script tag
     function addScript(){
         const script = document.createElement('script')
         script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyANnbr08pT--z5OBnhiZBwxShBY3_oOjQM&libraries=places&callback=initMap"
@@ -14,7 +15,7 @@ export default function(context, inject){
         window.initMap = initMap
         document.head.appendChild(script)
     }
-
+    // initialize map
     function initMap(){
         mapLoaded = true 
         if(mapWaiting){
@@ -24,6 +25,7 @@ export default function(context, inject){
         }
     }
 
+    //prepare for showing map
     function showMap(canvas, lat, lng){
         if(mapLoaded) {
             renderMap(canvas, lat, lng)
@@ -32,6 +34,7 @@ export default function(context, inject){
         }
     }
 
+    // setting up the map render and add maker to location
     function renderMap(canvas, lat, lng){
         const mapOptions = {
         zoom:18,
