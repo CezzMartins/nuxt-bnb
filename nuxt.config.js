@@ -23,12 +23,6 @@ export default{
 
     //auto import components
     components: true,
-    // env: {
-    //     baseUrl: process.env.ALGOLIA_API_KEY || 'http://localhost:3000',
-    //     baseUrl: process.env.ALGOLIA_APP_ID || 'http://localhost:3000',
-    //     baseUrl: process.env.MAP_API_KEY || 'http://localhost:3000',
-    //   },
-
     modules: [
         '@nuxtjs/dotenv'
     ]
