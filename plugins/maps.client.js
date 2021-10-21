@@ -1,6 +1,7 @@
 export default function(context, inject){
     let mapLoaded = false
     let mapWaiting = null
+    const mapKey = process.env.MAP_API_KEY
 
     addScript()
     inject('maps', {
@@ -10,7 +11,8 @@ export default function(context, inject){
     // add the Google APi Maps to the site script tag
     function addScript(){
         const script = document.createElement('script')
-        script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyANnbr08pT--z5OBnhiZBwxShBY3_oOjQM&libraries=places&callback=initMap"
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${mapKey}&libraries=places&callback=initMap`
+        // script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyANnbr08pT--z5OBnhiZBwxShBY3_oOjQM&libraries=places&callback=initMap`
         script.async = true
         window.initMap = initMap
         document.head.appendChild(script)

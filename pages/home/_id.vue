@@ -16,18 +16,10 @@
 </template>
 
 <script>
-import homes from '@/data/homes.json';
-
-
     export default {
         head(){
             return{
                 title: this.home.title,
-            }
-        },
-        data(){
-            return{
-                home: {},
             }
         },
         methods:{
@@ -35,12 +27,14 @@ import homes from '@/data/homes.json';
         },
         
         mounted(){
-            // this.showMap()
+            // get the plugin to show the map at de div
             this.$maps.showMap(this.$refs.map, this.home._geoloc.lat,this.home._geoloc.lng)
         },                              
-        created(){
-            const home = homes.find((home) => home.objectID == this.$route.params.id)
-            this.home = home
+        async asyncData({ params, $dataApi }){
+            const home = await $dataApi.getHome(params.id)
+            return {
+                home, 
+            }
         },
         
     }

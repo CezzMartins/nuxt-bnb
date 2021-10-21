@@ -3,9 +3,12 @@
   "dependencies": {
     "nuxt": "^2.15.8"
   },
-  "scripts":{
+  "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start"
+  },
+  "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1"
   }
 }
